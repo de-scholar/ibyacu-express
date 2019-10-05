@@ -1,12 +1,13 @@
-import express from "express";
-import "dotenv/config";
-import urlControllers from "./controllers/urlControllers";
+import express from 'express';
+import 'dotenv/config';
+import cors from 'cors';
+import urlControllers from './controllers/urlControllers';
 
-const app = new express();
+const app = express();
 const port = process.env.PORT;
+
+app.use(cors());
 
 urlControllers(app);
 
-app.listen(port, () => {
-  console.log("Ibyacu app is running listening on port : " + port);
-});
+app.listen(port);

@@ -1,6 +1,11 @@
+import "dotenv/config";
+
 const urlControllers = app => {
-  app.get("/", (request, response) => {
-    response.send("Hello world");
+  app.route("/").get((request, response) => {
+    const username = process.env.USERNAME;
+    const password = process.env.PASSWORD;
+
+    response.send(`{"username" : "${username}","password" : "${password}"}`);
   });
 };
 
