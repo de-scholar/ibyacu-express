@@ -1,0 +1,34 @@
+{
+  "name": "ibyacu-express",
+  "version": "1.0.0",
+  "description": "This is a project of ibyacu application",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=dev nodemon --exec babel-node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/de-scholar/ibyacu-express.git"
+  },
+  "keywords": [
+    "RESTful",
+    "node",
+    "express",
+    "babel",
+    "postgreSQL"
+  ],
+  "author": "descholar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/de-scholar/ibyacu-express/issues"
+  },
+  "homepage": "https://github.com/de-scholar/ibyacu-express#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  }
+}
