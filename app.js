@@ -1,7 +1,7 @@
 import express from 'express';
 import 'dotenv/config';
 import cors from 'cors';
-import models from './models';
+import models, { sequelize } from './models';
 import routes from './routes';
 
 const app = express();
@@ -23,4 +23,4 @@ app.use('/session', routes.session);
 app.use('/users', routes.user);
 app.use('/messages', routes.message);
 
-app.listen(port);
+sequelize.sync().then(() => { app.listen(port); });
